@@ -1,6 +1,6 @@
 resource "google_project" "tc_project" {
   name            = "TC Project"
-  project_id      = var.project_id
+  project_id      = "${var.project_id}-${random_id.project_suffix.hex}"
   org_id          = var.org_id
   billing_account = var.billing_account
 }
