@@ -1,3 +1,4 @@
+# Project variables
 variable "org_id" {
   description = "GCP Organization ID"
   type        = string
@@ -18,6 +19,7 @@ variable "services" {
   type = list(string)
 }
 
+# Network variables
 variable "vpc_name" {
   description = "Name of the VPC"
   type        = string
@@ -40,4 +42,11 @@ variable "region" {
   description = "Region for the subnet"
   type        = string
   default     = "us-west1"
+}
+
+# Storage variables
+variable "bucket_name" {
+  description = "Name of the bucket"
+  type        = string
+  default     = "bucket-1"
 }
